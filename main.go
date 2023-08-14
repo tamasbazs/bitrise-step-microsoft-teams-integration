@@ -15,7 +15,7 @@ import (
 	"github.com/bitrise-io/go-utils/colorstring"
 )
 
-var buildSucceeded = os.Getenv("BITRISE_BUILD_STATUS") == "0"
+var buildSucceeded = os.Getenv("BITRISEIO_PIPELINE_BUILD_STATUS") == "0"
 
 func getValueForBuildStatus(ifSuccess, ifFailed string, buildSucceeded bool) string {
 	if buildSucceeded || ifFailed == "" {
